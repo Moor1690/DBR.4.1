@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.dbr41.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_sigUpFragment"
+            app:destination="@id/sigUpFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sigInFragment"
+            app:destination="@id/sigInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sigUpFragment"
+        android:name="com.example.dbr41.SigUpFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sig_in" >
+        <action
+            android:id="@+id/action_sigUpFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sigInFragment"
+        android:name="com.example.dbr41.WelcomeFragment"
+        android:label="fragment_sig_in"
+        tools:layout="@layout/fragment_sig_in" >
+        <action
+            android:id="@+id/action_sigInFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>
